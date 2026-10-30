@@ -6,7 +6,7 @@ public class Pumpkin {
     //size
     //is Jackolantern
 
-    public String color = "orange";
+    public String color;
     //size
     public int size;
     //is jackolantern
@@ -15,11 +15,19 @@ public class Pumpkin {
     //special method: constructor
     //name has to match the class name
     //do not use void
-    public Pumpkin (){
-        color = "Orange";
-        size = 10;
-        isJackolantern = false;
+    public Pumpkin (int pSize, boolean pIsJackolantern, String  pColor){
+        color = pColor;
+        size = pSize;
+        isJackolantern = pIsJackolantern;
     }
+
+    public void printInfo (){
+        System.out.println("the pumpkins color is " + color);
+        System.out.println("How big is the pumpkin " + size );
+        System.out.println("This pumpkin a jackolantern " + isJackolantern);
+
+    }
+
 
 
 

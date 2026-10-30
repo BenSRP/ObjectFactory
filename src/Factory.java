@@ -15,6 +15,8 @@ public Pumpkin pumpkin1;
 public Pumpkin pumpkin2;
 public Pumpkin pumpkin3;
 
+public int randomSize;
+
     void main(String[] args) {
         Factory a = new Factory();
 }
@@ -27,27 +29,31 @@ public Pumpkin pumpkin3;
         System.out.println("it is" + isOpen +"that the factory is open");
         System.out.println("the owner is " +owner);
 
-        pumpkin1 = new Pumpkin();
+        pumpkin1 = new Pumpkin(20, true, "Orange");
         System.out.println(pumpkin1.color);
         //todo: print out the rest of the pumpkin's instance variables
         //bonus challenge: print out words to explain the variables
         System.out.println(pumpkin1.size);
         System.out.println(pumpkin1.isJackolantern);
 
-        pumpkin2 = new Pumpkin();
+        randomSize = (int)(Math.random() * 31); //range 0-30
+        pumpkin2 = new Pumpkin(67, false, "White");
+        System.out.println("random " + pumpkin2.size);
         System.out.println(pumpkin2.color);
        pumpkin2.color = "Blue";
         pumpkin2.size = 20;
         pumpkin2.size = pumpkin1.size * 2;
         System.out.println(pumpkin2.size);
         System.out.println(pumpkin2.color);
+        pumpkin2.printInfo();
 
-        pumpkin3 = new Pumpkin();
+        pumpkin3 = new Pumpkin(100, true, "Green");
         System.out.println(pumpkin3.color);
         pumpkin3.color = "White";
         pumpkin3.size = pumpkin2.size * pumpkin1.size;
         System.out.println(pumpkin3.color);
         System.out.println(pumpkin3.size);
+
 
 
 
